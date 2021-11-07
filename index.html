@@ -9,55 +9,77 @@
     rel="stylesheet" />
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 </head>
 
 <body>
   <div class="container">
-    <div class="calendar">
-      <div class="bar-space">
-        <div class="dep">
-          <p> Depression level: </p>
+    <!-- Calendar & Sleeptime/Depression Level Plot -->
+    <div class="left-display" style="width: 700px;">
+      <!-- Calendar -->
+      <div class="calendar">
+        <div class="bar-space">
+          <div class="dep">
+            <p> Depression level: </p>
+          </div>
+          <div class="bar">
+            <p class="zero">0</p>
+            <p class="hund">100</p>
+          </div>
         </div>
-        <div class="bar">
-          <p class="zero">0</p>
-          <p class="hund">100</p>
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1></h1>
+            <p></p>
+          </div>
+          <i class="fas fa-angle-right next"></i>
         </div>
-      </div>
-      <div class="month">
-        <i class="fas fa-angle-left prev"></i>
-        <div class="date">
-          <h1></h1>
-          <p></p>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
         </div>
-        <i class="fas fa-angle-right next"></i>
-      </div>
-      <div class="weekdays">
-        <div>Sun</div>
-        <div>Mon</div>
-        <div>Tue</div>
-        <div>Wed</div>
-        <div>Thu</div>
-        <div>Fri</div>
-        <div>Sat</div>
-      </div>
-      <div class="days">
+        <div class="days">
 
+        </div>
+
+        <!-- Sleep Time & Depression Level Plot -->
+        <div class="sleep-time-depression-level">
+          <div id="sleep-time-depression-level-plot"></div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="daily-emotion">
 
-    <div id="daliy-emotion-plot"></div>
-  </div>
-  <div class="daily-exercise">
-    <div id="daliy-distance-plot"></div>
-    <div id="daliy-calories-plot"></div>
-  </div>
+    <!-- Exercise Map -->
+    <div class="right-display" style="width: 500px;">
+      <div class="exercise-map">
+        <div id="map"></div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjdIWnNrGtEYDiCeDDkR6X6hq4zPCjqi8&callback=initMap&region=kr"></script>
+        <script src="js/exercise_map.js"></script>
+      </div>
+      <div id="wrapper" style="width: 500px;">
+        <div id="daliy-distance-plot"></div>
+        <div id="daliy-calories-plot"></div>
+      </div>
 
-
+      <!-- Daily Emotion Plot -->
+      <div class="daily-emotion">
+        <div id="daliy-emotion-plot"></div>
+      </div>
+    </div>
+    
+  </div>
+  
 
 </body>
+
 <script src="js/script.js"></script>
+<script src="js/sleep_time&depression_level.js"></script>
 <script src="js/daily_emotion.js"></script>
 <script src="js/daily_exercise.js"></script>
 

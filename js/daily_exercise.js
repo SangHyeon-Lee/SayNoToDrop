@@ -16,10 +16,12 @@ var layout_distance = {
   title: "Distance\n",
   xaxis: { visible: false, range: [-1, 1] },
   yaxis: { visible: false, range: [-1, 1] },
+  width: 240,
+  height: 250,
   annotations: [
     {
       font: {
-        size: 20,
+        size: 15,
       },
       showarrow: false,
       text: distance + "km / " + distance_goal + "km",
@@ -49,10 +51,12 @@ var layout_calories = {
   title: "Calories\n",
   xaxis: { visible: false, range: [-1, 1] },
   yaxis: { visible: false, range: [-1, 1] },
+  width: 240,
+  height: 250,
   annotations: [
     {
       font: {
-        size: 20,
+        size: 15,
       },
       showarrow: false,
       text: calories + "cal / " + calories_goal + "cal",

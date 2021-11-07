@@ -36,6 +36,7 @@ function makePlotly(x, y) {
   var layout = {
     xaxis: {range: [6, 24]},
     yaxis: {range: [-9, 9]},
+    height: 350,
     shapes: [
         {
             type: 'line',
