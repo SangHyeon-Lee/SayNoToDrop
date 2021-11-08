@@ -30,12 +30,13 @@ function makePlotly(x, y) {
     {
       x: x,
       y: y,
+      
     },
   ];
 
   var layout = {
     xaxis: {range: [6, 24]},
-    yaxis: {range: [-9, 9]},
+    yaxis: {range: [-9, 9], tickvals:[-9, -3, 0, 9]},
     height: 350,
     shapes: [
         {
