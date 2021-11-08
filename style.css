@@ -162,10 +162,10 @@ html {
     padding-top: 0%;
 }
 
-img {
+/* img {
     width: 30rem;
     height: 30rem;
-}
+} */
 
 #map {
     height: 100%;
@@ -177,3 +177,22 @@ html,
     margin: 0;
     padding: 0;
   }
+
+.date {
+  height: 30px;
+}
+
+.date-string {
+  width: 300px;
+  position: relative;
+  left: 100px;
+  bottom: 28px;
+}
+
+#prev {
+  cursor:pointer;
+}
+
+#next {
+  cursor:pointer;
+}

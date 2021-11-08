@@ -3,7 +3,7 @@ var map;
 function initMap() {
   var kaist = { lat: 36.370495, lng: 127.36074 };
   map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 16,
+    zoom: 15,
     center: kaist,
   });
   new google.maps.Marker({

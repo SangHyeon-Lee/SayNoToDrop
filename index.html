@@ -10,6 +10,9 @@
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script>
+    var showing_date = new Date(2021, 10, 10); // 2021-11-10
+  </script>
 </head>
 
 <body>
@@ -57,9 +60,23 @@
 
     <!-- Exercise Map -->
     <div class="right-display" style="width: 500px;">
+      <br>
+      <div class="date">
+        <img class="date-move" id="prev" src="images/prev.png" width="30px" onclick="prev_date()">
+        <div class="date-string">
+          <p id="date" align="center"
+            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size: x-large;">
+          </p>
+        </div>
+        <img id="next" src="images/next.png" width="30px" onclick="next_date()"
+          style="position: relative; bottom: 58px; left: 460px;">
+      </div>
+      <br>
       <div class="exercise-map">
         <div id="map"></div>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjdIWnNrGtEYDiCeDDkR6X6hq4zPCjqi8&callback=initMap&region=kr"></script>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjdIWnNrGtEYDiCeDDkR6X6hq4zPCjqi8&callback=initMap&region=kr">
+        </script>
         <script src="js/exercise_map.js"></script>
       </div>
       <div id="wrapper" style="width: 500px;">
@@ -72,9 +89,9 @@
         <div id="daliy-emotion-plot"></div>
       </div>
     </div>
-    
+
   </div>
-  
+
 
 </body>
 
@@ -82,5 +99,6 @@
 <script src="js/sleep_time&depression_level.js"></script>
 <script src="js/daily_emotion.js"></script>
 <script src="js/daily_exercise.js"></script>
+<script src="js/date_control.js"></script>
 
 </html>
