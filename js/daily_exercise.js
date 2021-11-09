@@ -26,7 +26,7 @@ function daily_exercise() {
     xaxis: { visible: false, range: [-1, 1] },
     yaxis: { visible: false, range: [-1, 1] },
     width: 247,
-    height: 250,
+    height: 240,
     margin: {
       l: 10,
       r: 10,
@@ -68,7 +68,7 @@ function daily_exercise() {
     yaxis: { visible: false, range: [-1, 1] },
     
     width: 247,
-    height: 250,
+    height: 240,
     margin: {
       l: 10,
       r: 10,
