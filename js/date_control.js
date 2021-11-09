@@ -9,6 +9,8 @@ function prev_date() {
   m = showing_date.getMonth() + 1;
   d = showing_date.getDate();
   document.getElementById("date").innerHTML = y + " / " + m + " / " + d;
+  daily_exercise();
+  make_emotionplot();
 }
 
 function next_date() {
@@ -17,4 +19,6 @@ function next_date() {
   m = showing_date.getMonth() + 1;
   d = showing_date.getDate();
   document.getElementById("date").innerHTML = y + " / " + m + " / " + d;
+  daily_exercise();
+  make_emotionplot();
 }

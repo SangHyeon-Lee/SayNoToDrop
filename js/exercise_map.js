@@ -5,6 +5,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15,
     center: kaist,
+    disableDefaultUI: true,
   });
   new google.maps.Marker({
     position: { lat: 36.366148, lng: 127.363482 },
