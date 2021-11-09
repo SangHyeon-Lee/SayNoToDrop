@@ -34,8 +34,14 @@ function makePlotly(x, y) {
   ];
 
   var layout = {
-    xaxis: {range: [6, 24]},
-    yaxis: {range: [-9, 9]},
+    xaxis: {
+      range: [6, 24],
+      title: "Time"
+    },
+    yaxis: {
+      range: [-9, 9],
+      title: "Emotion Level"
+    },
     height: 350,
     shapes: [
         {

@@ -1,6 +1,6 @@
 var trace1 = {
     x: ["10/12", "10/13", "10/14", "10/15", "10/16", "10/17"],
-    y: [5, 12, 9, 6, 5, 7],
+    y: [4, 12, 9, 11, 3, 7],
     name: 'Sleep Time',
     type: 'scatter'
 };
@@ -15,7 +15,7 @@ var trace2 = {
   
 var trace3 = {
     x: ["10/12", "10/13", "10/14", "10/15", "10/16", "10/17"],
-    y: [1, 2, 3, 2, 0, 0],
+    y: [1, 3, 0, 2, 2, 0],
     name: 'Excess/Lack of Sleep Time',
     type: 'bar'
 };
@@ -32,6 +32,12 @@ var layout = {
     },
     width: 680,
     height: 500,
+    showlegend: true,
+    legend: {
+        x: 1,
+        xanchor: 'right',
+        y: 1.15
+    },
     shapes: [
         {
             type: 'line',

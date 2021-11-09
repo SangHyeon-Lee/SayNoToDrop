@@ -18,6 +18,12 @@ var layout_distance = {
   yaxis: { visible: false, range: [-1, 1] },
   width: 240,
   height: 250,
+  margin: {
+    l: 10,
+    r: 10,
+    b: 10,
+    t: 50,
+  },
   annotations: [
     {
       font: {
@@ -53,6 +59,12 @@ var layout_calories = {
   yaxis: { visible: false, range: [-1, 1] },
   width: 240,
   height: 250,
+  margin: {
+    l: 10,
+    r: 10,
+    b: 10,
+    t: 50,
+  },
   annotations: [
     {
       font: {

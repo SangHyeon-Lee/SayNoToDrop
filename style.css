@@ -28,6 +28,7 @@ html {
     height: 42rem;
     background-color: aliceblue;
     box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
+    align-self: center;
 }
 .bar-space{
   width : 100%;  
@@ -128,8 +129,10 @@ html {
 /* Sleep Time & Depression Level Chart */
 .sleep-time-depression-level {
     width: 700px;
-    border-radius: 10px;
-    border: black;
+    border: solid;
+    align-self: baseline;
+    border-bottom: 0em;
+    border-left: 0em;
 }
 
 /* Right Display (Map & Pie Charts All Together) */
@@ -145,15 +148,27 @@ html {
     position: right;
 }
 
+html,
+  .exercise-map {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
 /* Daily Distance & Calories Pie plot */
 #wrapper {
     display: inline-flex;
+    border: solid;
+    border-left: 0ch;
+    border-right: 0ch;
 }
-  
+
+/* Daily Distance Pie Plot */
 #daily-distance-plot {
     flex: 0 0 65%;
 }
 
+/* Daily Calories Pie Plot */
 #daliy-calories-plot {
     flex: 1;
 }
@@ -162,21 +177,9 @@ html {
     padding-top: 0%;
 }
 
-/* img {
-    width: 30rem;
-    height: 30rem;
-} */
-
 #map {
     height: 100%;
 }
-
-html,
-  .exercise-map {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
 
 .date {
   height: 30px;
