@@ -26,17 +26,17 @@ function daily_exercise() {
     xaxis: { visible: false, range: [-1, 1] },
     yaxis: { visible: false, range: [-1, 1] },
     width: 247,
-    height: 240,
+    height: 180,
     margin: {
       l: 10,
       r: 10,
       b: 10,
-      t: 50,
+      t: 30,
     },
     annotations: [
       {
         font: {
-          size: 15,
+          size: 12,
         },
         showarrow: false,
         text: distance + "km / " + distance_goal + "km",
@@ -68,17 +68,17 @@ function daily_exercise() {
     yaxis: { visible: false, range: [-1, 1] },
     
     width: 247,
-    height: 240,
+    height: 180,
     margin: {
       l: 10,
       r: 10,
       b: 10,
-      t: 50,
+      t: 30,
     },
     annotations: [
       {
         font: {
-          size: 15,
+          size: 12,
         },
         showarrow: false,
         text: calories + "cal / " + calories_goal + "cal",
