@@ -1,6 +1,14 @@
 var map;
 
 function initMap() {
+  var yesterday = new Date(2021, 10, 9);
+
+  var color = ["#FF0000", "#FF8000", "#FFFF00"];
+
+  if (showing_date.getTime() == yesterday.getTime()) {
+    color = ["#FF8000", "#FFFF00", "#FF0000"];
+  }
+
   var kaist = { lat: 36.370495, lng: 127.36074 };
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15,
@@ -21,7 +29,7 @@ function initMap() {
   const path1 = new google.maps.Polyline({
     path: coord1,
     geodesic: true,
-    strokeColor: "#FF0000",
+    strokeColor: color[0],
     strokeOpacity: 1.0,
     strokeWeight: 2,
   });
@@ -37,7 +45,7 @@ function initMap() {
   const path2 = new google.maps.Polyline({
     path: coord2,
     geodesic: true,
-    strokeColor: "#FF8000",
+    strokeColor: color[1],
     strokeOpacity: 1.0,
     strokeWeight: 2,
   });
@@ -53,7 +61,7 @@ function initMap() {
   const path3 = new google.maps.Polyline({
     path: coord3,
     geodesic: true,
-    strokeColor: "#FFFF00",
+    strokeColor: color[2],
     strokeOpacity: 1.0,
     strokeWeight: 2,
   });
@@ -69,7 +77,7 @@ function initMap() {
   const path4 = new google.maps.Polyline({
     path: coord4,
     geodesic: true,
-    strokeColor: "#FF0000",
+    strokeColor: color[1],
     strokeOpacity: 1.0,
     strokeWeight: 2,
   });
@@ -83,7 +91,7 @@ function initMap() {
   const path5 = new google.maps.Polyline({
     path: coord5,
     geodesic: true,
-    strokeColor: "#FF8000",
+    strokeColor: color[0],
     strokeOpacity: 1.0,
     strokeWeight: 2,
   });

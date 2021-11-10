@@ -11,6 +11,7 @@ function prev_date() {
   document.getElementById("date").innerHTML = y + " / " + m + " / " + d;
   daily_exercise();
   make_emotionplot();
+  initMap();
 }
 
 function next_date() {
@@ -21,4 +22,5 @@ function next_date() {
   document.getElementById("date").innerHTML = y + " / " + m + " / " + d;
   daily_exercise();
   make_emotionplot();
+  initMap();
 }
