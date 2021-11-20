@@ -1,13 +1,6 @@
-function daily_exercise() {
-  var distance = 7.5;
-  var calories = 1300;
-
-  var yesterday = new Date(2021, 10, 9);
-
-  if (showing_date.getTime() == yesterday.getTime()) {
-    distance = 9.8;
-    calories = 2500;
-  }
+function show_daily_exercise(data) {
+  var distance = data.DistanceToday / 100000;
+  var calories = data.CaloriesToday;
 
   var distance_goal = 10;
   var calories_goal = 3000;
@@ -66,7 +59,7 @@ function daily_exercise() {
     title: "Calories\n",
     xaxis: { visible: false, range: [-1, 1] },
     yaxis: { visible: false, range: [-1, 1] },
-    
+
     width: 247,
     height: 180,
     margin: {
@@ -117,4 +110,21 @@ function daily_exercise() {
   });
 }
 
-daily_exercise()
+// Only show "showing_date" data from csv file
+// toISOString converts to UTC 0 timezone, so subtract timezoneoffset before compare
+function daily_exercise() {
+  d3.csv("./data/daily_exercise.csv", function (data) {
+    var timezone_offset = new Date().getTimezoneOffset() * 60000;
+    var fixed_date = new Date(showing_date - timezone_offset);  
+
+    var date_string = fixed_date   
+      .toISOString()
+      .substring(0, 10);
+    console.log(date_string);
+    if (data.Date == date_string) {
+      show_daily_exercise(data);
+    }
+  });
+}
+
+daily_exercise();
