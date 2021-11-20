@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script>
+    var showing_date = new Date(2019, 4, 7); // 2021-11-10
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Calendar & Sleeptime/Depression Level Plot -->
+    <div class="left-display" style="width: 700px;">
+      <!-- Calendar -->
+      <div class="calendar">
+        <div class="bar-space">
+          <div class="dep">
+            <p> Depression level: </p>
+          </div>
+          <div class="bar">
+            <p class="zero">0</p>
+            <p class="hund">100</p>
+          </div>
+        </div>
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1></h1>
+            <p></p>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days">
+
+        </div>
+
+      </div>
+      <!-- Sleep Time & Depression Level Plot -->
+      <div class="sleep-time-depression-level">
+        <div id="sleep-time-depression-level-plot"></div>
+      </div>
+    </div>
+
+    <!-- Exercise Map -->
+    <div class="right-display" style="width: 500px;">
+      <br>
+      <div class="date">
+        <img class="date-move" id="prev" src="images/prev.png" width="30px" onclick="prev_date()">
+        <div class="date-string">
+          <p id="date" align="center"
+            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size: x-large;">
+          </p>
+        </div>
+        <img id="next" src="images/next.png" width="30px" onclick="next_date()"
+          style="position: relative; bottom: 58px; left: 460px;">
+      </div>
+      <br>
+
+      <div class="exercise-map">
+        <img src="images/map_legend_hori.png"/>
+        <div id="map"></div>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjdIWnNrGtEYDiCeDDkR6X6hq4zPCjqi8&callback=initMap&region=kr">
+        </script>
+        <script src="js/exercise_map.js"></script>
+      </div>
+      <div id="wrapper" style="width: 494px;">
+        <div id="daliy-distance-plot"></div>
+        <div id="daliy-calories-plot"></div>
+      </div>
+
+      <!-- Daily Emotion Plot -->
+      <div class="daily-emotion">
+        <div id="daliy-emotion-plot"></div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<script src="js/calendar_heatmap.js"></script>
+<script src="js/sleep_time&depression_level.js"></script>
+<script src="js/daily_emotion.js"></script>
+<script src="js/daily_exercise.js"></script>
+<script src="js/date_control.js"></script>
+</html>
