@@ -1,13 +1,4 @@
 function daily_exercise() {
-  var response = fetch("../data/daily_exercise.csv") // reference the csv data file
-  .then((response) => response.text()) // response into text
-  .then(function (v) {
-    // after the converting, make the string into JSON using custom function "csvJSON(v)"
-    console.log(v);
-    console.log("hi");
-  })
-  .catch((err) => console.log(err)); // if there exist error, catch it
-
   var distance = 7.5;
   var calories = 1300;
 
@@ -75,7 +66,7 @@ function daily_exercise() {
     title: "Calories\n",
     xaxis: { visible: false, range: [-1, 1] },
     yaxis: { visible: false, range: [-1, 1] },
-
+    
     width: 247,
     height: 180,
     margin: {
@@ -126,4 +117,4 @@ function daily_exercise() {
   });
 }
 
-daily_exercise();
+daily_exercise()

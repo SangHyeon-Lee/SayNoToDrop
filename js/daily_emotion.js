@@ -10,14 +10,38 @@ function timetofloat(timestamp) {
 
 
 function make_emotionplot() {
-
   var x_array = [],
   y_array = [];
+  var eight = new Date(2019, 5, 8);
+  var nine = new Date(2019, 5, 9);
+  var ten = new Date(2019, 5, 10);
+  var ele = new Date(2019, 5, 11);
+  var twle = new Date(2019, 5, 12);
+  var thir = new Date(2019, 5, 13);
+  var fort = new Date(2019, 5, 14);
 
-  var yesterday = new Date(2021, 10, 9);
-  var data_file = "./data/fake_2021_11_10_emotion.csv";
-  if (showing_date.getTime() == yesterday.getTime()) {
-    data_file = "./data/fake_2021_11_09_emotion.csv";
+  
+  var data_file = "./data/701_2019-05-07_emotion.csv";
+  if (showing_date.getDate() == eight.getDate()) {
+    data_file = "./data/701_2019-05-08_emotion.csv";
+  }
+  else if (showing_date.getDate() == ten.getDate()) {
+    data_file = "./data/701_2019-05-10_emotion.csv";
+  }
+  else if (showing_date.getDate() == nine.getDate()) {
+    data_file = "./data/701_2019-05-09_emotion.csv";
+  }
+  else if (showing_date.getDate() == ele.getDate()) {
+    data_file = "./data/701_2019-05-11_emotion.csv";
+  }
+  else if (showing_date.getDate() == twle.getDate()) {
+    data_file = "./data/701_2019-05-12_emotion.csv";
+  }
+  else if (showing_date.getDate() == thir.getDate()) {
+    data_file = "./data/701_2019-05-13_emotion.csv";
+  }
+  else if (showing_date.getDate() == fort.getDate()) {
+    data_file = "./data/701_2019-05-14_emotion.csv";
   }
   d3.csv(data_file, function (data) {
     processData(data, x_array, y_array);

@@ -20,36 +20,6 @@ var trace3 = {
     type: 'bar'
 };
 
-var updatemenus=[
-    {
-        buttons: [
-            {
-                args: [{'visible': [true, false, true]}],
-                label: 'Sleep Time',
-                method: 'update'
-            },
-            {
-                args: [{'visible': [false, true, true]}],
-                label:'Depression Level',
-                method:'update'
-            },
-            {
-                args: [{'visible': [true, true, true]}],
-                label:'All',
-                method:'update'
-            }
-        ],
-        direction: 'left',
-        pad: {'r': 10, 't': 10},
-        showactive: true,
-        type: 'buttons',
-        x: 0,
-        xanchor: 'left',
-        y: 1.1,
-        yanchor: 'top'
-    }
-]
-
 var layout = {
     title: 'Sleep Time & Depression Level',
     yaxis: {title: 'Sleep Time'},
@@ -63,7 +33,6 @@ var layout = {
     width: 680,
     height: 500,
     showlegend: true,
-    updatemenus: updatemenus,
     legend: {
         x: 1,
         xanchor: 'right',
