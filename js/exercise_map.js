@@ -2,6 +2,8 @@ var lon = [];
 var lat = [];
 var speed = [];
 
+const average = list => list.reduce((prev, curr) => Number(prev) + Number(curr)) / list.length;
+
 function show_map() {
   scl = [
     [0, "rgb(255,255,0)"],
@@ -49,8 +51,8 @@ function show_map() {
     dragmode: "zoom",
     mapbox: {
       center: {
-        lat: 36.3732192,
-        lon: 127.3620096,
+        lat: average(lat),
+        lon: average(lon),
       },
       domain: {
         x: [0, 1],
