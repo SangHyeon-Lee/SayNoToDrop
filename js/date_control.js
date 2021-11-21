@@ -16,6 +16,7 @@ function prev_date() {
   document.querySelector(x).style.borderRadius = "50%";
   daily_exercise();
   make_emotionplot();
+  exercise_map();
 }
 
 function next_date() {
@@ -31,4 +32,5 @@ function next_date() {
   document.querySelector(x).style.borderRadius = "50%";
   daily_exercise();
   make_emotionplot();
+  exercise_map();
 }

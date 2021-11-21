@@ -1,97 +1,100 @@
-var map;
+var lon = [];
+var lat = [];
+var speed = [];
 
-function initMap() {
-  var kaist = { lat: 36.370495, lng: 127.36074 };
-  map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
-    center: kaist,
-    disableDefaultUI: true,
-  });
-  new google.maps.Marker({
-    position: { lat: 36.366148, lng: 127.363482 },
-    map: map,
-    label: "START",
-  });
-  const coord1 = [
-    { lat: 36.366148, lng: 127.363482 },
-    { lat: 36.369837, lng: 127.360827 },
-    { lat: 36.370766, lng: 127.359719 },
-    { lat: 36.37178, lng: 127.35711 },
+function show_map() {
+  scl = [
+    [0, "rgb(255,255,0)"],
+    [0.5, "rgb(255, 224, 200)"],
+    [1, "rgb(255, 192, 255)"],
+    [1.5, "rgb(255, 160, 255)"],
+    [2, "rgb(255, 128, 150)"],
+    [2.5, "rgb(255, 96, 0)"],
+    [3, "rgb(255, 64, 0)"],
+    [3.5, "rgb(255, 32, 0)"],
+    [4, "rgb(255, 0, 0)"],
   ];
-  const path1 = new google.maps.Polyline({
-    path: coord1,
-    geodesic: true,
-    strokeColor: "#FF0000",
-    strokeOpacity: 1.0,
-    strokeWeight: 2,
-  });
 
-  path1.setMap(map);
-
-  const coord2 = [
-    { lat: 36.37178, lng: 127.35711 },
-    { lat: 36.373421, lng: 127.358912 },
-    { lat: 36.374457, lng: 127.359881 },
-    { lat: 36.374413, lng: 127.363995 },
+  var data = [
+    {
+      type: "scattermapbox",
+      mode: "markers",
+      text: speed,
+      lon: lon,
+      lat: lat,
+      marker: {
+        color: speed,
+        colorscale: scl,
+        cmin: 0,
+        cmax: 4,
+        reversescale: false,
+        opacity: 1,
+        size: 5,
+        colorbar: {
+          thickness: 10,
+          titleside: "right",
+          outlinecolor: "rgba(68,68,68,0)",
+          ticks: "outside",
+          ticklen: 3,
+          // shoticksuffix: "last",
+          ticksuffix: "m/sec",
+          dtick: 0.5,
+        },
+      },
+      name: "Exercise map",
+    },
   ];
-  const path2 = new google.maps.Polyline({
-    path: coord2,
-    geodesic: true,
-    strokeColor: "#FF8000",
-    strokeOpacity: 1.0,
-    strokeWeight: 2,
+
+  layout = {
+    dragmode: "zoom",
+    mapbox: {
+      center: {
+        lat: 36.3732192,
+        lon: 127.3620096,
+      },
+      domain: {
+        x: [0, 1],
+        y: [0, 1],
+      },
+      style: "light",
+      zoom: 12,
+    },
+    margin: {
+      r: 0,
+      t: 0,
+      b: 0,
+      l: 0,
+      pad: 0,
+    },
+    showlegend: false,
+  };
+
+  Plotly.setPlotConfig({
+    mapboxAccessToken:
+      "pk.eyJ1Ijoic2FuZ2h5ZW9uIiwiYSI6ImNrdzI0MDFtdzA3a2UydW1wcXRwN3pzaDYifQ.z1gzq_vzgfcSJOxIBPzY7g",
   });
 
-  path2.setMap(map);
+  Plotly.newPlot("map", data, layout);
+}
+function exercise_map() {
+  lon = [];
+  lat = [];
+  speed = [];
 
-  const coord3 = [
-    { lat: 36.374413, lng: 127.363995 },
-    { lat: 36.373428, lng: 127.3654 },
-    { lat: 36.372599, lng: 127.364381 },
-    { lat: 36.372426, lng: 127.36275 },
-  ];
-  const path3 = new google.maps.Polyline({
-    path: coord3,
-    geodesic: true,
-    strokeColor: "#FFFF00",
-    strokeOpacity: 1.0,
-    strokeWeight: 2,
-  });
+  var timezone_offset = new Date().getTimezoneOffset() * 60000;
+  var fixed_date = new Date(showing_date - timezone_offset);
 
-  path3.setMap(map);
+  var date_string = fixed_date.toISOString().substring(0, 10);
 
-  const coord4 = [
-    { lat: 36.372426, lng: 127.36275 },
-    { lat: 36.371571, lng: 127.361302 },
-    { lat: 36.370698, lng: 127.362944 },
-    { lat: 36.371139, lng: 127.365111 },
-  ];
-  const path4 = new google.maps.Polyline({
-    path: coord4,
-    geodesic: true,
-    strokeColor: "#FF0000",
-    strokeOpacity: 1.0,
-    strokeWeight: 2,
-  });
+  var file = "../data/" + date_string + "_exercise_map.csv";
 
-  path4.setMap(map);
-
-  const coord5 = [
-    { lat: 36.371139, lng: 127.365111 },
-    { lat: 36.368763, lng: 127.367171 },
-  ];
-  const path5 = new google.maps.Polyline({
-    path: coord5,
-    geodesic: true,
-    strokeColor: "#FF8000",
-    strokeOpacity: 1.0,
-    strokeWeight: 2,
-  });
-
-  path5.setMap(map);
-  new google.maps.Marker({
-    position: { lat: 36.368763, lng: 127.367171 },
-    map: map,
-    label: "END",
+  d3.csv(file, function (data) {
+    lon.push(data.longitude);
+    lat.push(data.latitude);
+    speed.push(data.speed);
+  }).then(function () {
+    show_map();
   });
 }
+
+exercise_map();

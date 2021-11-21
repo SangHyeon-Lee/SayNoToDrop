@@ -120,7 +120,7 @@ function daily_exercise() {
     var date_string = fixed_date   
       .toISOString()
       .substring(0, 10);
-    console.log(date_string);
+    
     if (data.Date == date_string) {
       show_daily_exercise(data);
     }
