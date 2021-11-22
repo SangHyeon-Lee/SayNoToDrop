@@ -1,5 +1,5 @@
 function show_daily_exercise(data) {
-  var distance = data.DistanceToday / 100000;
+  var distance = (data.DistanceToday / 100000).toFixed(2);
   var calories = data.CaloriesToday;
 
   var distance_goal = 10;
@@ -13,6 +13,11 @@ function show_daily_exercise(data) {
   var radians = (degrees * Math.PI) / 180;
   var x = -1 * radius * Math.cos(radians);
   var y = radius * Math.sin(radians);
+
+  var distance_percent = (100 * distance / distance_goal).toFixed(2);
+  var calories_percent = (100 * calories / calories_goal).toFixed(2);
+
+
 
   var layout_distance = {
     title: "Distance\n",
@@ -29,10 +34,19 @@ function show_daily_exercise(data) {
     annotations: [
       {
         font: {
+          size: 20,
+        },
+        showarrow: false,
+        text: distance_percent + "%",
+        yshift: 25
+      },
+      {
+        font: {
           size: 12,
         },
         showarrow: false,
         text: distance + "km / " + distance_goal + "km",
+        yshift: -5
       },
     ],
   };
@@ -71,10 +85,19 @@ function show_daily_exercise(data) {
     annotations: [
       {
         font: {
+          size: 20,
+        },
+        showarrow: false,
+        text: calories_percent + "%",
+        yshift: 25
+      },
+      {
+        font: {
           size: 12,
         },
         showarrow: false,
         text: calories + "cal / " + calories_goal + "cal",
+        yshift: -5
       },
     ],
   };
