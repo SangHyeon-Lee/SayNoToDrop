@@ -130,6 +130,7 @@ const renderCalendar = () => {
           document.getElementById("date").innerHTML = y + " / " + m + " / " + d;
           daily_exercise();
           make_emotionplot();
+          exercise_map();
           document.querySelector(".date p").innerHTML = "Selected date : "+date.toDateString();
           document.querySelector(x).style.borderRadius = "50%";
         });
