@@ -88,7 +88,7 @@ function exercise_map() {
 
   var date_string = fixed_date.toISOString().substring(0, 10);
 
-  var file = "../data/" + date_string + "_exercise_map.csv";
+  var file = "./data/" + date_string + "_exercise_map.csv";
 
   d3.csv(file, function (data) {
     lon.push(data.longitude);
