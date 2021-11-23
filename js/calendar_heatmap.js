@@ -62,7 +62,7 @@ const renderCalendar = () => {
     "December",
   ];
 
-  const colors = ["#ffbab8","#fc9895","#ff8985","#ff706b","#ff554f","#ff3f38","#ff2921","#ff0b03"];
+  const colors = ["#ffbab8","#ff8985","#ff554f","#ff2921","#ff0b03"];
 
   
   document.querySelector(".date h1").innerHTML = months[date.getMonth()] + " " + date.getFullYear();
