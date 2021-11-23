@@ -43,47 +43,16 @@ function show_sleeptime_depression_level(data, x, sleeptime, lackorexcess_sleept
         }
     };
 
-    var updatemenus=[
-        {
-            buttons: [
-                {
-                    args: [{'visible': [true, false, true]}],
-                    label: 'Sleep Time',
-                    method: 'update'
-                },
-                {
-                    args: [{'visible': [false, true, true]}],
-                    label:'Depression Level',
-                    method:'update'
-                },
-                {
-                    args: [{'visible': [true, true, true]}],
-                    label:'All',
-                    method:'update'
-                }
-            ],
-            direction: 'left',
-            pad: {'r': 10, 't': 10},
-            showactive: true,
-            type: 'buttons',
-            x: 0,
-            xanchor: 'left',
-            y: 1.3,
-            yanchor: 'top'
-        }
-    ]
-
     var layout = {
         xaxis: {title: 'Date'},
         yaxis: {title: 'Sleep Time'},
         yaxis2: {
-        title: 'Depression Level',
-        titlefont: {color: 'rgb(148, 103, 189)'},
-        tickfont: {color: 'rgb(148, 103, 189)'},
-        overlaying: 'y',
-        side: 'right'
+            title: 'Depression Level',
+            titlefont: {color: 'rgb(148, 103, 189)'},
+            tickfont: {color: 'rgb(148, 103, 189)'},
+            overlaying: 'y',
+            side: 'right',
         },
-        updatemenus: updatemenus,
         width: 680,
         height: 500,
         showlegend: true,
@@ -135,4 +104,32 @@ function makeplot() {
   
   };
 
-  makeplot()
+function checkbox_select() {
+    // Get the checkbox
+    var checkBox = document.getElementById("checkbox1");
+    if (checkBox.checked == true){
+        data_index = 0,
+        myDiv = document.getElementById("sleep-time-depression-level-plot"),
+        Plotly.restyle("sleep-time-depression-level-plot", 'visible', true, data_index);
+    } else {
+        data_index = 0,
+        myDiv = document.getElementById("sleep-time-depression-level-plot"),
+        Plotly.restyle("sleep-time-depression-level-plot", 'visible', false, data_index);
+    }
+}
+
+function checkbox_select2() {
+    var checkBox2 = document.getElementById("checkbox2");
+    if (checkBox2.checked == true){
+        data_index = 1,
+        myDiv = document.getElementById("sleep-time-depression-level-plot"),
+        Plotly.restyle("sleep-time-depression-level-plot", 'visible', true, data_index);
+    } else {
+        data_index = 1,
+        myDiv = document.getElementById("sleep-time-depression-level-plot"),
+        Plotly.restyle("sleep-time-depression-level-plot", 'visible', false, data_index);
+    }
+}
+
+makeplot()
+

@@ -46,3 +46,15 @@
 11ø˘ 21, 2021 10:09:50 ø¿»ƒ org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 ¡§∫∏: Unsupported notification method: $/setTrace
 [0m2021.11.22 11:22:54 INFO  shutting down Metals[0m
+[0m2021.11.22 14:35:07 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\chanh\Desktop\CS492 µ•¿Ã≈Õ ∞°Ω√»≠\Design Projects\SayNoToDrop' for client Visual Studio Code 1.62.3.[0m
+[0m2021.11.22 14:35:12 INFO  time: initialize in 4.43s[0m
+[0m2021.11.22 14:35:15 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.22 14:35:15 WARN  no build tool detected in workspace 'C:\Users\chanh\Desktop\CS492 µ•¿Ã≈Õ ∞°Ω√»≠\Design Projects\SayNoToDrop'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+11ø˘ 22, 2021 2:54:58 ø¿»ƒ org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+¡§∫∏: Unsupported notification method: $/setTrace
+[0m2021.11.22 20:10:39 INFO  shutting down Metals[0m
+[0m2021.11.23 00:37:01 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\chanh\Desktop\CS492 µ•¿Ã≈Õ ∞°Ω√»≠\Design Projects\SayNoToDrop' for client Visual Studio Code 1.62.3.[0m
+[0m2021.11.23 00:37:02 INFO  time: initialize in 1.65s[0m
+[0m2021.11.23 00:37:08 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.23 00:37:08 WARN  no build tool detected in workspace 'C:\Users\chanh\Desktop\CS492 µ•¿Ã≈Õ ∞°Ω√»≠\Design Projects\SayNoToDrop'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.11.23 03:48:50 INFO  shutting down Metals[0m

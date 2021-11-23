@@ -200,3 +200,36 @@ html,
 #next {
   cursor:pointer;
 }
+
+/* Check Boxes */
+#checkbox1 {
+    width: 20px;
+    height: 20px;
+    margin-left:80px; 
+    position: absolute; 
+    top: 20px
+}
+
+#checkbox_text1 {
+    font-size: 12px;
+    margin-left:80px; 
+    position: absolute; 
+    top: 21px; 
+    left: 22px
+}
+
+#checkbox2 {
+    width: 20px;
+    height: 20px;
+    margin-left:80px; 
+    position: absolute; 
+    top: 42px
+}
+
+#checkbox_text2 {
+    font-size: 12px;
+    margin-left:80px; 
+    position: absolute; 
+    top: 43px; 
+    left: 22px
+}
