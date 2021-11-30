@@ -58,3 +58,18 @@
 [0m2021.11.23 00:37:08 WARN  Build server is not auto-connectable.[0m
 [0m2021.11.23 00:37:08 WARN  no build tool detected in workspace 'C:\Users\chanh\Desktop\CS492 µ•¿Ã≈Õ ∞°Ω√»≠\Design Projects\SayNoToDrop'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
 [0m2021.11.23 03:48:50 INFO  shutting down Metals[0m
+[0m2021.11.23 14:35:24 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\chanh\Desktop\CS492 µ•¿Ã≈Õ ∞°Ω√»≠\Design Projects\SayNoToDrop' for client Visual Studio Code 1.62.3.[0m
+[0m2021.11.23 14:35:26 INFO  time: initialize in 1.96s[0m
+[0m2021.11.23 14:35:29 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.23 14:35:29 WARN  no build tool detected in workspace 'C:\Users\chanh\Desktop\CS492 µ•¿Ã≈Õ ∞°Ω√»≠\Design Projects\SayNoToDrop'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.11.23 16:10:11 INFO  shutting down Metals[0m
+[0m2021.11.23 17:11:31 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\chanh\Desktop\CS492 µ•¿Ã≈Õ ∞°Ω√»≠\Design Projects\SayNoToDrop' for client Visual Studio Code 1.62.3.[0m
+[0m2021.11.23 17:11:32 INFO  time: initialize in 1.3s[0m
+[0m2021.11.23 17:11:33 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.23 17:11:33 WARN  no build tool detected in workspace 'C:\Users\chanh\Desktop\CS492 µ•¿Ã≈Õ ∞°Ω√»≠\Design Projects\SayNoToDrop'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.11.23 20:19:28 INFO  shutting down Metals[0m
+[0m2021.11.23 21:00:37 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\chanh\Desktop\CS492 µ•¿Ã≈Õ ∞°Ω√»≠\Design Projects\SayNoToDrop' for client Visual Studio Code 1.62.3.[0m
+[0m2021.11.23 21:00:38 INFO  time: initialize in 1.26s[0m
+[0m2021.11.23 21:00:40 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.23 21:00:40 WARN  no build tool detected in workspace 'C:\Users\chanh\Desktop\CS492 µ•¿Ã≈Õ ∞°Ω√»≠\Design Projects\SayNoToDrop'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.11.23 21:05:42 INFO  shutting down Metals[0m

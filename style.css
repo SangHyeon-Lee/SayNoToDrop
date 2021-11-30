@@ -13,6 +13,8 @@ html {
     width: 100%;
     /* height: 100vh; */
     display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 /* Left Display */
@@ -20,6 +22,7 @@ html {
     display: flex;
     flex-direction:column;
     border: solid;
+    border-right: 0em;
 }
 
 /* Calendar */
@@ -129,10 +132,8 @@ html {
 /* Sleep Time & Depression Level Chart */
 .sleep-time-depression-level {
     width: 700px;
-    border: solid;
     align-self: baseline;
-    border-bottom: 0em;
-    border-left: 0em;
+
 }
 
 /* Right Display (Map & Pie Charts All Together) */
@@ -140,6 +141,7 @@ html {
     display: flex;
     flex-direction:column;
     border: solid;
+    border-left: 0em;
 }
 
 /* Exercise Map */
@@ -158,9 +160,7 @@ html,
 /* Daily Distance & Calories Pie plot */
 #wrapper {
     display: inline-flex;
-    border: solid;
-    border-left: 0ch;
-    border-right: 0ch;
+    padding-top: 5%;
 }
 
 /* Daily Distance Pie Plot */
@@ -232,4 +232,11 @@ html,
     position: absolute; 
     top: 43px; 
     left: 22px
+}
+
+/* User Manual */
+
+.description {
+    border: solid;
+    border-left: 0em;
 }
