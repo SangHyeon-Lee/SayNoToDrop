@@ -27,26 +27,28 @@ html {
 
 /* Calendar */
 .calendar {
+    position: relative;
+    bottom: 50px;
     width: 30rem;
-    height: 42rem;
+    height: 37rem;
     background-color: aliceblue;
-    box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
     align-self: center;
 }
 .bar-space{
+  position: relative;
+  top: 50px;
   width : 100%;  
   height : 5rem;
-  background-color:aliceblue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
 }
 .dep{
     font-weight: bold;
+    font-size: large;
 }
 .bar{
-    width : 50%;  
+    position: relative;
+    left: 10px;
+    width : 80%;  
     height : 2rem;
     background: linear-gradient(to right,#ffffff, #ff0b03);
     margin: 1rem;
@@ -62,7 +64,7 @@ html {
 }
 .hund{
     position: relative;
-    left: 105px;
+    left: 100px;
     font-weight: bold;
 }
 
