@@ -75,7 +75,13 @@ function makePlotly(x, y) {
       range: [-9, 9], tickvals:[-9, -3, 0, 9],
       title: "Emotion Level"
     },
-    height: 350,
+    height: 300,
+    margin: {
+      l: 50,
+      r: 50,
+      b: 50,
+      t: 20,
+    },
     shapes: [
         {
             type: 'line',

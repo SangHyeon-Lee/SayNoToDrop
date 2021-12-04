@@ -49,6 +49,7 @@ function show_map() {
 
   layout = {
     dragmode: "zoom",
+    height: 400,
     mapbox: {
       center: {
         lat: average(lat),

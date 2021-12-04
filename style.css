@@ -150,14 +150,11 @@ html {
 .exercise-map {
     padding-left: 100px;
     position: right;
-}
-
-html,
-  .exercise-map {
-    height: 300px;
     margin: 0;
     padding: 0;
-  }
+}
+
+
 
 /* Daily Distance & Calories Pie plot */
 #wrapper {
