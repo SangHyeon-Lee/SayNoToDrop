@@ -66,7 +66,7 @@ function show_daily_exercise(data) {
       colors: ["rgba(255, 0, 0, 0.6)", "rgba(0, 0, 0, 0.1)", "white"],
     },
     labels: ["", "", ""],
-    hoverinfo: "label",
+    hoverinfo: "none",
   };
 
   var layout_calories = {
@@ -117,7 +117,7 @@ function show_daily_exercise(data) {
       colors: ["rgba(0, 0, 255, 0.6)", "rgba(0, 0, 0, 0.1)", "white"],
     },
     labels: ["", "", ""],
-    hoverinfo: "label",
+    hoverinfo: "none",
   };
 
   var data_distance = [trace_distance];
